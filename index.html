@@ -168,12 +168,19 @@
         localStorage.setItem('visits', visits);
         console.log('Liczba odwiedzin: ' + visits);
     });
+    function kontakt(){
+        a = window.open();
+        a.document.write("<center><h1>Kontakt</h1><p>E-MAIL:&NBSP;<span style='color: red;'>nettlesidsoft@hotmail.com</span></center>");
+    }
+    function soft(){
+        window.open().document.write("<p>Strona nie jest gotowa</p>");
+    }
 </script>
 <body>
     <center>
         <p><img src="https://nettlesidsoft.github.io/Nettles.png" alt="NettlesIDSoft Logo" width="100" height="100"></p>
         <h1><span>Nettles</span><span style="color:orange;">ID</span>SOFT</h1>
-        <p class="nav-container"><button>Strona główna</button> <button>Informacje</button> <button>O nas</button> <select><option>Kontakt</option><option>Adres E-mail</option><option>Instagram<img src="https://nettlesidsoft.github.io/Nettles.png" alt="Instagram" width="20" height="20"></option></select> <button>Aplikacje</button> <button>Programy komputerowe</button> <select><option>Nasze projekty</option><option onclick="websites()">Strony <i>internetowe</i></option><option>Aplikacje</option><option>Programy komputerowe</option><option>Bazy danych</option></select></p>
+       <p><a href="">Strona Główna</a> <a href="">O Nas</a> <a href="" onclick="soft()">Nasze projekty</a> <a href="" onclick="kontakt()">Kontakt</a></p>
         <p><input type="text" placeholder="Wpisz swoją wiadomość..."><input type="submit" value="Szukaj"></p>
         <code>
             <h2>Witamy na stronie NettlesIDSoft!</h2>
