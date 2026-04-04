@@ -1,191 +1,71 @@
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Oficjalna strona internetowa NettlesIDSoft - oprogramowanie i rozwiązania IT.">
-    <meta name="keywords" content="NettlesIDSoft, oprogramowanie, IT, rozwiązania, programy">
-    <meta name="author" content="NettlesIDSoft Team">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="icon" href="https://nettlesidsoft.github.io/Nettles.png" type="image/x-icon">
-    <title>NettlesIDSoft</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-        body{
-            background-color: azure;
-            font-family: arial black;
-            margin: 0;
-            padding: 10px;
-        }
-        button, select{
-            background-color: rgba(5, 3, 0, 0.274);
-            color: white;
-            font-size: 16px;
-            border-radius: 10px;
-            border: none;
-            padding: 10px;
-            margin: 5px;
-            cursor: pointer;
-            flex: 1;
-            min-width: 100px;
-        }
-        span{
-            color: black;
-            background-color: rgba(5, 3, 0, 0.274);
-            padding: 5px;
-        }
-        .nav-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 5px;
-        }
-        h1 {
-            font-size: 28px;
-            margin: 20px 0 10px 0;
-        }
-        h2 {
-            font-size: 22px;
-        }
-        h3 {
-            font-size: 18px;
-        }
-        code {
-            display: block;
-            text-align: center;
-        }
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 24px;
-            }
-            h2 {
-                font-size: 20px;
-            }
-            h3 {
-                font-size: 16px;
-            }
-            button, select {
-                font-size: 14px;
-                padding: 8px;
-                min-width: 80px;
-            }
-        }
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 20px;
-            }
-            h2 {
-                font-size: 18px;
-            }
-            h3 {
-                font-size: 14px;
-            }
-            button, select {
-                font-size: 12px;
-                padding: 6px;
-                margin: 3px;
-                min-width: 70px;
-            }
-            body {
-                padding: 5px;
-            }
-        }
-    </style>
+    <title>O Nas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<script>
-    // Funkcja dla stron internetowych
-    function websites() {
-        alert('Sprawdź nasze strony internetowe wkrótce!');
-    }
-
-    // Dodaj event listeners do przycisków
-    document.addEventListener('DOMContentLoaded', function() {
-        const buttons = document.querySelectorAll('button');
-        buttons.forEach(button => {
-            button.addEventListener('click', function() {
-                const text = this.textContent;
-                switch(text) {
-                    case 'Strona główna':
-                        alert('Jesteś już na stronie głównej!');
-                        break;
-                    case 'Informacje':
-                        alert('Informacje: Oferujemy aplikacje, strony i programy.');
-                        break;
-                    case 'O nas':
-                        alert('NettlesIDSoft - Twój partner w IT.');
-                        break;
-                    case 'Aplikacje':
-                        alert('Strona nie jest gotowa, ale wkrótce pojawią się nasze aplikacje mobilne!');
-                        break;
-                    case 'Programy komputerowe':
-                        alert('Strona nie jest gotowa, ale wkrótce pojawią się nasze programy komputerowe!');
-                        break;
-                    default:
-                        alert('Przycisk: ' + text);
-                }
-            });
-        });
-
-        // Dla pierwszego select (Kontakt)
-        const contactSelect = document.querySelector('select');
-        contactSelect.addEventListener('change', function() {
-            const value = this.value;
-            if (value === 'Adres E-mail') {
-                window.location.href = 'mailto:contact@nettlesidsoft.com';
-            } else if (value === 'Instagram') {
-                window.open('https://instagram.com/nettlesidsoft', '_blank');
-            }
-        });
-
-        // Dla drugiego select (Projekty)
-        const projectSelect = document.querySelectorAll('select')[1];
-        projectSelect.addEventListener('change', function() {
-            const value = this.value;
-            if (value === 'Strony internetowe') {
-                websites();
-            } else {
-                alert('Wybrano: ' + value);
-            }
-        });
-
-        // Dodaj animację do tytułu
-        const title = document.querySelector('h1');
-        title.addEventListener('mouseover', function() {
-            this.style.transform = 'scale(1.05)';
-            this.style.transition = 'transform 0.3s';
-        });
-        title.addEventListener('mouseout', function() {
-            this.style.transform = 'scale(1)';
-        });
-
-        // Dodaj licznik odwiedzin (prosty)
-        let visits = localStorage.getItem('visits') || 0;
-        visits++;
-        localStorage.setItem('visits', visits);
-        console.log('Liczba odwiedzin: ' + visits);
-    });
-    function kontakt(){
-        a = window.open();
-        a.document.write("<center><h1>Kontakt</h1><p>E-MAIL:&NBSP;<span style='color: red;'>nettlesidsoft@hotmail.com</span></center>");
-    }
-    function soft(){
-        window.open().document.write("<p>Strona nie jest gotowa</p>");
-    }
-</script>
 <body>
-    <center>
-        <p><img src="https://nettlesidsoft.github.io/Nettles.png" alt="NettlesIDSoft Logo" width="100" height="100"></p>
-        <h1><span>Nettles</span><span style="color:orange;">ID</span>SOFT</h1>
-       <p><a href="">Strona Główna</a> <a href="opis.html">O Nas</a> <a href="pro.html">Nasze projekty</a> <a href="" onclick="kontakt()">Kontakt</a></p>
-        <p><input type="text" placeholder="Wpisz swoją wiadomość..."><input type="submit" value="Szukaj"></p>
-        <code>
+    <header>
+       <span>Nettles</span><span style="color:orange;">ID</span><span>SOFT</span>
+       <p><a href="https://nettlesidsoft.github.io/">Strona Główna</a>&nbsp;<a href="https://nettlesidsoft.github.io/opis.html">O Nas</a>&nbsp;<a href="https://nettlesidsoft.github.io/kontakt.html">Kontakt</a>&nbsp;<a href="https://nettlesidsoft.github.io/pro.html">Nasze projekty</a></p>
+    </header>
+    <div class="fortx">
+<code>
             <h2>Witamy na stronie NettlesIDSoft!</h2>
             <h3>Stworzymy dla ciebie aplikacje mobilną oraz strony internetowe i program komputerowy</h3>
         </code>
-    </center>
-    <span style="color: white; background-color: red; display: block; padding: 10px; text-align: center;">Uwaga! Strona jest w budowie</span>
+    </div>
+    <style>
+.fortx {
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    line-height: 1.6;
+    margin: 20px;
+    text-align: center;
+    background-color: rgba(9, 0, 49, 0.562);
+}
+body {
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://nettlesidsoft.github.io/Nettles.png');
+    background-repeat: no-repeat;
+        min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  background-color: #010220;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: arial;
+    border: solid 2px #ffffff;  
+}
+SPAN{
+    font-size: 24px;
+    font-weight: bold;
+    font-family: arial;
+}
+        footer {
+  margin-top: auto;
+  background: #05000f;
+  color: #ffd900;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  font-size: 16px;
+  box-sizing: border-box;
+  border-top: 2px solid #000000;
+}
+    </style>
+     <footer style="">Copyright © 2026 NettlesIDSOFT <a href="https://nettlesidsoft.github.io/" style="color: white; border: none; text-decoration: underline ;">NettlesID Soft</a>. Wszelkie prawa zastrzeżone.</footer>
 </body>
