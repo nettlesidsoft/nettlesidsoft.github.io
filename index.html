@@ -14,7 +14,7 @@
        <span>Nettles</span><span style="color:orange;">ID</span><span>SOFT</span>
        <p><a href="https://nettlesidsoft.github.io/">Strona Główna</a>&nbsp;<a href="https://nettlesidsoft.github.io/opis.html">O Nas</a>&nbsp;<a href="https://pksmsciow.github.io/zxc.html">Kontakt</a>&nbsp;<a href="https://nettlesidsoft.github.io/pro.html">Nasze projekty</a></p>
     </header>
-    <img src="Wspi_20260406_224425_0000.gif" style="width:100%;">
+    <img src="Wspi_20260406_224425_0000.gif" style="width:100%;" id="aru">
 
     <div class="fortx">
 <code>
@@ -74,11 +74,19 @@ SPAN{
     </style>
      <footer style="">Copyright © 2026 NettlesIDSOFT <a href="https://nettlesidsoft.github.io/" style="color: white; border: none; text-decoration: underline ;">NettlesID Soft</a>. Wszelkie prawa zastrzeżone.</footer>
 <script>
-var backgroundMusic = new ('nettlesidsoft.github.io/Java Cat Window (1).mp3');
-backgroundMusic.loop = true;
-backgroundMusic.play();
-function pauseMusic() {
-    backgroundMusic.pause();
+// Tworzymy obiekt audio całkowicie w pamięci przeglądarki
+const bgMusic = new Audio("Java Cat Window (1).mp3");
+bgMusic.loop = true;
+// Funkcja uruchamiająca
+function startMusic() {
+    bgMusic.play().catch(error => {
+        console.log("Autoodtwarzanie zablokowane - czekam na kliknięcie.");
+    });
 }
+// Podpinasz to pod dowolny element, np. obrazek kota
+document.getElementById('aru').addEventListener('click', function() {
+    startMusic();
+    // Możesz też dodać kod, który np. ukrywa napis "Kliknij, aby włączyć muzykę"
+});
 </script>
 </body>
